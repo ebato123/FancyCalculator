@@ -1,0 +1,111 @@
+/* IMPORTS */
+@font-face {
+    font-family: 'digital-7'; /* Nombre de la fuente personalizada */
+    src: url('../fonts/digital-7.regular.ttf') format('truetype'); /* Ruta a tu archivo .ttf */
+  }
+
+/* GLOBAL CONFIG */
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-size: 16px;
+    font-family: "Be Vietnam Pro", Arial, Helvetica, sans-serif;
+    list-style: none;
+  }
+
+/* BUTTONS */
+/* Header Buttons */
+button.h-button{
+    width: 40px;
+    height: 30px;
+
+    font-size: 12px;
+    border-radius: 10%;
+
+    
+    font-family: 'digital-7', sans-serif;
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* Para DISPOSITIVOS de 249px en adelante (Celulares)*/
+@media (min-width: 249px) {
+
+/********************** BODY **********************/
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: black;
+    background-image: url("/imgs/pexels-joão-jesus-925743.jpg");
+    background-size: cover;
+
+
+}
+
+/**************************** HEADER ****************************/
+body header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+}
+
+body header section#sec1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 50%;
+
+    background-color: black;
+    border-radius: 5%;
+    margin-left: 5%;
+
+}
+
+body header section#sec1 h2{
+    font-family: 'digital-7', sans-serif;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+body header section#sec2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+    padding: 7.5%;
+
+
+
+}
+
+body main {
+    display: flex;
+
+    background-color: rgb(9, 9, 9);
+
+    width: 90%;
+    height: 80%;
+
+    border-radius: 2%;
+}
+
+
+
+
+}
