@@ -29,6 +29,12 @@ button.h-button{
     color: whitesmoke;
 }
 
+/* Calc Buttons */
+body main section#sec1 article#calc-body button.calc-button{
+    width: 55px;
+    height: 55px;
+}
+
 /* Para DISPOSITIVOS de 249px en adelante (Celulares)*/
 @media (min-width: 249px) {
 
@@ -96,6 +102,9 @@ body header section#sec2{
 
 body main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     background-color: rgb(9, 9, 9);
 
@@ -105,6 +114,63 @@ body main {
     border-radius: 2%;
 }
 
+body main section#sec1{
+    display: flex;
+
+    width: 80%;
+    height: 10%;
+
+    background-color: red;
+}
+
+body main section#sec2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    height: 80%;
+
+    background-color: aqua;
+}
+
+body main section#sec2 article#calc-body{
+    display: grid;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 45px);
+
+    width: 100%;
+}
+
+
+body main section#sec3{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    height: 10%;
+
+    background-color: aquamarine;
+}
+
+
+
+
+
+
+
+
+body footer {
+    display: flex;
+
+    background-color: rgb(221, 221, 221);
+
+    width: 100%;
+    height: 10%;
+
+    border-radius: 2%;
+}
 
 
 
