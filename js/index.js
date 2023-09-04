@@ -1,13 +1,25 @@
 let numbersToCalculate = [];
 $(() => {
-    $(".calc-button").click((event) => {
+    const $displayLabel = $("#input")[0];
+    $(".calc-button").on("click", (event) => {
         //Preliminar idea
         let buttonValue = $(event.target).data("value");
-        if (buttonValue === "=") {
-            console.log(eval(numbersToCalculate.join("")));
-            numbersToCalculate = [];
-            return;
+        switch (buttonValue) {
+            case "=":
+                const result = eval(numbersToCalculate.join(""));
+                numbersToCalculate = [result];
+                break;
+            case "delete":
+                numbersToCalculate.pop();
+                break;
+            case "clear":
+                numbersToCalculate = [];
+                break;
+            default:
+                numbersToCalculate.push(buttonValue);
+                break;
         }
-        numbersToCalculate.push(buttonValue);
+        $displayLabel.innerText =
+            numbersToCalculate.length > 0 ? numbersToCalculate.join("") : 0;
     });
 });
