@@ -4,10 +4,18 @@ $(() => {
     $(".calc-button").on("click", (event) => {
         //Preliminar idea
         let buttonValue = $(event.target).data("value");
+        let lastValue = numbersToCalculate[numbersToCalculate.length - 1];
+        if (
+            isNaN(buttonValue) &&
+            isNaN(lastValue) &&
+            !["delete", "clear", "clear-error", "(", ")"].includes(lastValue)
+        ) {
+            return;
+        }
         switch (buttonValue) {
             case "=":
                 const result = eval(numbersToCalculate.join(""));
-                numbersToCalculate = [result];
+                numbersToCalculate = result.toString().split("");
                 break;
             case "delete":
                 numbersToCalculate.pop();
