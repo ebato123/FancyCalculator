@@ -8,7 +8,7 @@ $(() => {
         if (
             isNaN(buttonValue) &&
             isNaN(lastValue) &&
-            !["delete", "clear", "clear-error", "(", ")"].includes(lastValue)
+            !["delete", "clear", "clear-error", "(", ")"].includes(buttonValue)
         ) {
             return;
         }
