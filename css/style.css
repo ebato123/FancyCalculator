@@ -16,7 +16,7 @@
 
 /* Mobile DISPLAY
 /* Para DISPOSITIVOS de hasta 1500px en adelante (Celulares)*/
-@media (max-width: 900px) {
+@media (min-width: 1px) {
 
 /* BUTTONS */
 /* Header Buttons */
@@ -111,8 +111,8 @@ body main {
 
     border-radius: 2%;
 
-    padding-top: 11%;
-    padding-bottom: 12%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 body main section#sec1{
@@ -227,212 +227,6 @@ body footer section#sec2 article#Elian{
 
 /* Tablet DISPLAY
 /* Desde DISPOSITIVOS de 901px en adelante (Celulares)*/
-@media (min-width: 901px) {
+@media (min-width: 801px) {
 
-/* BUTTONS */
-/* Header Buttons */
-button.h-button{
-    width: 55%;
-    height: 55%;
-
-    font-size: 12px;
-    border-radius: 10%;
-
-    
-    font-family: 'digital-7', sans-serif;
-    background-color: black;
-    color: whitesmoke;
-
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-/* Calc Buttons */
-
-    /********************** BODY **********************/
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    
-        width: 100vw;
-        height: 100vh;
-        
-        background-color: black;
-        background-image: url("/imgs/pexels-joão-jesus-925743.jpg");
-        background-size: cover;
-    
-    
-    }
-    
-    /**************************** HEADER ****************************/
-    body header{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    
-        width: 100%;
-        height: 10%;
-    }
-    
-    body header section#sec1{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    
-        width: 50%;
-        height: 50%;
-    
-        background-color: black;
-        border-radius: 5%;
-        margin-left: 5%;
-    
-    }
-    
-    body header section#sec1 h2{
-        font-family: 'digital-7', sans-serif;
-        color: whitesmoke;
-    }
-    
-    body header section#sec2{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    
-        width: 50%;
-        height: 100%;
-
-    }
-    
-    /**************************** MAIN ****************************/
-    body main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-        background-color: rgb(9, 9, 9);
-    
-        width: 90%;
-        height: 80%;
-    
-        border-radius: 2%;
-    
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-    
-    body main section#sec1{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-    
-        width: 80%;
-        height: 15%;
-    
-        background-color: rgb(221, 221, 221);
-    
-        border-radius: 5%;
-    
-        margin-bottom: 2%;
-    }
-    
-    body main section#sec1 label#input{
-        margin-right: 5%;
-    
-        font-family: 'digital-7', sans-serif;
-        font-size: 30px;
-        color:  black;
-    }
-    
-    body main section#sec2{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-        width: 80%;
-        height: 85%;
-    
-        background-color: black;
-    }
-    
-    body main section#sec2 article#calc-body{
-        display: grid;
-        
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-    
-        width: 100%;
-        height: 100%;
-    }
-    
-    /**************************** FOOTER ****************************/
-    body footer {
-        display: flex;
-    
-        background-color: rgb(221, 221, 221);
-    
-        width: 100%;
-        height: 10%;
-    
-        border-radius: 2%;
-    }
-    
-    body footer section#sec1{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    
-        width: 50%;
-        height: 100%;
-    
-        padding: 2%;
-    }
-    
-    body footer section#sec1 h2{
-        font-family: 'digital-7', sans-serif;
-    }
-    
-    body footer section#sec1 h2{
-        font-family: 'digital-7', sans-serif;
-    }
-    
-    body footer section#sec2{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    
-        width: 50%;
-        height: 100%;
-    }
-    
-    body footer section#sec2 article#Franco{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-        width: 50%;
-        height: 100%;
-
-        padding-left: 25%;
-    }
-    
-    body footer section#sec2 article#Elian{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-        width: 50%;
-        height: 100%;
-
-        padding-right: 25%;
-    }
 }
