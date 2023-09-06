@@ -1,9 +1,11 @@
 let numbersToCalculate = [];
+let numbersToDisplay = [];
 $(() => {
     const $displayLabel = $("#input")[0];
     $(".calc-button").on("click", (event) => {
         //Preliminar idea
         let buttonValue = $(event.target).data("value");
+        let buttonDisplay = $(event.target).data("display");
         let lastValue = numbersToCalculate[numbersToCalculate.length - 1];
         if (
             isNaN(buttonValue) &&
@@ -15,19 +17,30 @@ $(() => {
         switch (buttonValue) {
             case "=":
                 const result = eval(numbersToCalculate.join(""));
-                numbersToCalculate = result.toString().split("");
+                const resultArr = result.toString().split("");
+                numbersToCalculate = resultArr;
+                numbersToDisplay = resultArr;
                 break;
             case "delete":
                 numbersToCalculate.pop();
+                numbersToDisplay.pop();
                 break;
             case "clear":
                 numbersToCalculate = [];
+                numbersToDisplay = [];
+                break;
+            case "sqr":
+                numbersToCalculate.push("**");
+                numbersToCalculate.push(2);
+                numbersToDisplay.push(buttonDisplay);
                 break;
             default:
                 numbersToCalculate.push(buttonValue);
+                numbersToDisplay.push(buttonDisplay);
                 break;
         }
         $displayLabel.innerText =
-            numbersToCalculate.length > 0 ? numbersToCalculate.join("") : 0;
+            numbersToDisplay.length > 0 ? numbersToDisplay.join("") : 0;
+        console.log(numbersToCalculate);
     });
 });
