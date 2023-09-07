@@ -18,8 +18,8 @@ $(() => {
             case "=":
                 const result = eval(numbersToCalculate.join(""));
                 const resultArr = result.toString().split("");
-                numbersToCalculate = resultArr;
-                numbersToDisplay = resultArr;
+                numbersToCalculate = resultArr.slice();
+                numbersToDisplay = resultArr.slice();
                 break;
             case "delete":
                 numbersToCalculate.pop();
@@ -30,8 +30,7 @@ $(() => {
                 numbersToDisplay = [];
                 break;
             case "sqr":
-                numbersToCalculate.push("**");
-                numbersToCalculate.push(2);
+                numbersToCalculate = numbersToCalculate.concat(["**", "2"]);
                 numbersToDisplay.push(buttonDisplay);
                 break;
             default:
@@ -41,6 +40,5 @@ $(() => {
         }
         $displayLabel.innerText =
             numbersToDisplay.length > 0 ? numbersToDisplay.join("") : 0;
-        console.log(numbersToCalculate);
     });
 });
